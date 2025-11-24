@@ -8,94 +8,119 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .page-hero {
-            height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            margin-top: 70px;
+        body {
+            background: #ffffff;
         }
         
-        .page-hero h1 {
-            font-size: 3rem;
-            letter-spacing: 2px;
+        .models-hero {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: #ffffff;
+        }
+        
+        .models-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        
+        .models-hero p {
+            color: #999999;
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .models-section {
+            padding: 60px 20px 100px;
         }
         
         .models-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         .model-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
+            background: #ffffff;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
         
         .model-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
         }
         
-        .model-card img {
+        .model-image {
             width: 100%;
-            height: 400px;
+            height: 500px;
             object-fit: cover;
+            background: #f5f5f5;
         }
         
         .model-info {
-            padding: 1.5rem;
+            padding: 25px 0;
             text-align: center;
         }
         
         .model-info h3 {
-            margin-bottom: 0.5rem;
             font-size: 1.3rem;
+            font-weight: 500;
+            color: #000000;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
         }
         
         .model-specialty {
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            background: var(--accent-color);
-            color: var(--white);
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .model-stats {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--secondary-color);
-        }
-        
-        .model-stat {
-            text-align: center;
-        }
-        
-        .model-stat strong {
+            font-size: 0.85rem;
+            color: #666666;
+            margin-bottom: 20px;
             display: block;
-            color: var(--accent-color);
-            font-size: 0.9rem;
         }
         
-        .model-stat span {
-            color: var(--text-light);
-            font-size: 0.8rem;
+        .model-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 40px;
+            background: #000000;
+            color: #ffffff;
+            border: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .model-btn:hover {
+            background: #333333;
+        }
+        
+        .model-btn i {
+            font-size: 1rem;
         }
         
         @media (max-width: 768px) {
-            .page-hero h1 {
+            .models-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .models-hero h1 {
                 font-size: 2rem;
+                letter-spacing: 2px;
+            }
+            
+            .model-image {
+                height: 450px;
             }
         }
     </style>
@@ -109,7 +134,8 @@
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="about.html">À propos</a></li>
                     <li><a href="formations.html">Formations</a></li>
-                    <li><a href="mannequins.html">Mannequins</a></li>
+                    <li><a href="mannequins.html" class="active">Nos Mannequins</a></li>
+                    <li><a href="inscription.html">S'inscrire</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -117,149 +143,76 @@
         </div>
     </header>
 
-    <section class="page-hero">
-        <h1>NOS MANNEQUINS</h1>
+    <section class="models-hero">
+        <h1>Nos Mannequins</h1>
+        <p>Découvrez les talents exceptionnels qui composent notre agence et qui brillent sur les podiums internationaux</p>
     </section>
 
-    <section class="section">
-        <div class="container">
-            <div class="models-grid">
-                <div class="model-card" onclick="window.location.href='model-detail.html?id=1'">
-                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600" alt="Emma Laurent">
-                    <div class="model-info">
-                        <h3>Emma Laurent</h3>
-                        <span class="model-specialty">Podium</span>
-                        <div class="model-stats">
-                            <div class="model-stat">
-                                <strong>1m78</strong>
-                                <span>Taille</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>22 ans</strong>
-                                <span>Âge</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>Paris</strong>
-                                <span>Ville</span>
-                            </div>
-                        </div>
-                        <a href="model-detail.html?id=1" class="btn" style="margin-top: 1rem;">En savoir plus</a>
-                    </div>
+    <section class="models-section">
+        <div class="models-grid">
+            <div class="model-card" onclick="window.location.href='model-detail.html?id=1'">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800" alt="Emma Laurent" class="model-image">
+                <div class="model-info">
+                    <h3>Emma Laurent</h3>
+                    <span class="model-specialty">Fashion & Haute Couture</span>
+                    <a href="model-detail.html?id=1" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
                 </div>
+            </div>
 
-                <div class="model-card" onclick="window.location.href='model-detail.html?id=2'">
-                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600" alt="Sophie Dubois">
-                    <div class="model-info">
-                        <h3>Sophie Dubois</h3>
-                        <span class="model-specialty">Photo</span>
-                        <div class="model-stats">
-                            <div class="model-stat">
-                                <strong>1m75</strong>
-                                <span>Taille</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>24 ans</strong>
-                                <span>Âge</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>Lyon</strong>
-                                <span>Ville</span>
-                            </div>
-                        </div>
-                        <a href="model-detail.html?id=2" class="btn" style="margin-top: 1rem;">En savoir plus</a>
-                    </div>
+            <div class="model-card" onclick="window.location.href='model-detail.html?id=2'">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800" alt="Sophie Dubois" class="model-image">
+                <div class="model-info">
+                    <h3>Sophie Dubois</h3>
+                    <span class="model-specialty">Fashion & Haute Couture</span>
+                    <a href="model-detail.html?id=2" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
                 </div>
+            </div>
 
-                <div class="model-card" onclick="window.location.href='model-detail.html?id=3'">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600" alt="Léa Martin">
-                    <div class="model-info">
-                        <h3>Léa Martin</h3>
-                        <span class="model-specialty">Mixte</span>
-                        <div class="model-stats">
-                            <div class="model-stat">
-                                <strong>1m80</strong>
-                                <span>Taille</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>21 ans</strong>
-                                <span>Âge</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>Paris</strong>
-                                <span>Ville</span>
-                            </div>
-                        </div>
-                        <a href="model-detail.html?id=3" class="btn" style="margin-top: 1rem;">En savoir plus</a>
-                    </div>
+            <div class="model-card" onclick="window.location.href='model-detail.html?id=3'">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800" alt="Léa Martin" class="model-image">
+                <div class="model-info">
+                    <h3>Léa Martin</h3>
+                    <span class="model-specialty">Fashion & Haute Couture</span>
+                    <a href="model-detail.html?id=3" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
                 </div>
+            </div>
 
-                <div class="model-card" onclick="window.location.href='model-detail.html?id=4'">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600" alt="Clara Bernard">
-                    <div class="model-info">
-                        <h3>Clara Bernard</h3>
-                        <span class="model-specialty">Podium</span>
-                        <div class="model-stats">
-                            <div class="model-stat">
-                                <strong>1m79</strong>
-                                <span>Taille</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>23 ans</strong>
-                                <span>Âge</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>Nice</strong>
-                                <span>Ville</span>
-                            </div>
-                        </div>
-                        <a href="model-detail.html?id=4" class="btn" style="margin-top: 1rem;">En savoir plus</a>
-                    </div>
+            <div class="model-card" onclick="window.location.href='model-detail.html?id=4'">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800" alt="Clara Bernard" class="model-image">
+                <div class="model-info">
+                    <h3>Clara Bernard</h3>
+                    <span class="model-specialty">Fashion & Haute Couture</span>
+                    <a href="model-detail.html?id=4" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
                 </div>
+            </div>
 
-                <div class="model-card" onclick="window.location.href='model-detail.html?id=5'">
-                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600" alt="Marie Rousseau">
-                    <div class="model-info">
-                        <h3>Marie Rousseau</h3>
-                        <span class="model-specialty">Photo</span>
-                        <div class="model-stats">
-                            <div class="model-stat">
-                                <strong>1m76</strong>
-                                <span>Taille</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>25 ans</strong>
-                                <span>Âge</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>Marseille</strong>
-                                <span>Ville</span>
-                            </div>
-                        </div>
-                        <a href="model-detail.html?id=5" class="btn" style="margin-top: 1rem;">En savoir plus</a>
-                    </div>
+            <div class="model-card" onclick="window.location.href='model-detail.html?id=5'">
+                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800" alt="Marie Rousseau" class="model-image">
+                <div class="model-info">
+                    <h3>Marie Rousseau</h3>
+                    <span class="model-specialty">Fashion & Haute Couture</span>
+                    <a href="model-detail.html?id=5" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
                 </div>
+            </div>
 
-                <div class="model-card" onclick="window.location.href='model-detail.html?id=6'">
-                    <img src="https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=600" alt="Julie Petit">
-                    <div class="model-info">
-                        <h3>Julie Petit</h3>
-                        <span class="model-specialty">Mixte</span>
-                        <div class="model-stats">
-                            <div class="model-stat">
-                                <strong>1m77</strong>
-                                <span>Taille</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>20 ans</strong>
-                                <span>Âge</span>
-                            </div>
-                            <div class="model-stat">
-                                <strong>Bordeaux</strong>
-                                <span>Ville</span>
-                            </div>
-                        </div>
-                        <a href="model-detail.html?id=6" class="btn" style="margin-top: 1rem;">En savoir plus</a>
-                    </div>
+            <div class="model-card" onclick="window.location.href='model-detail.html?id=6'">
+                <img src="https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=800" alt="Julie Petit" class="model-image">
+                <div class="model-info">
+                    <h3>Julie Petit</h3>
+                    <span class="model-specialty">Fashion & Haute Couture</span>
+                    <a href="model-detail.html?id=6" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
                 </div>
             </div>
         </div>
