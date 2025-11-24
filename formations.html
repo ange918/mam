@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Formations - MODELS ACADEMY MANAGEMENT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558769132-cb1aea3c3000?w=1600') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 70px;
+        }
+        
+        .page-hero h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+        
+        .formation-detail {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .formation-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .formation-header i {
+            font-size: 4rem;
+            color: var(--accent-color);
+        }
+        
+        .formation-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        .formation-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+        
+        .formation-info h3 {
+            color: var(--accent-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .formation-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .formation-info ul li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-light);
+        }
+        
+        .formation-info ul li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .formation-sidebar {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            height: fit-content;
+        }
+        
+        .formation-sidebar h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+        
+        .info-item div strong {
+            display: block;
+            color: var(--primary-color);
+        }
+        
+        .info-item div span {
+            color: var(--text-light);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 968px) {
+            .formation-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .formation-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">MODELS <span>ACADEMY</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="mannequins.html">Mannequins</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <i class='bx bx-menu mobile-menu-btn'></i>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <h1>NOS FORMATIONS</h1>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div id="podium" class="formation-detail">
+                <div class="formation-header">
+                    <i class='bx bx-walk'></i>
+                    <h2>Formation Mannequin Podium</h2>
+                </div>
+                <div class="formation-content">
+                    <div class="formation-info">
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-light);">
+                            Apprenez l'art de la démarche professionnelle et maîtrisez tous les aspects du défilé de mode. 
+                            Cette formation complète vous prépare aux podiums nationaux et internationaux.
+                        </p>
+                        
+                        <h3><i class='bx bx-target-lock'></i> Objectifs de la Formation</h3>
+                        <ul>
+                            <li>Maîtriser la démarche professionnelle (catwalk)</li>
+                            <li>Développer sa présence scénique et son charisme</li>
+                            <li>Apprendre les techniques de pose et de présentation</li>
+                            <li>Comprendre les codes du défilé de mode</li>
+                            <li>Gérer le stress et la pression du podium</li>
+                        </ul>
+                        
+                        <h3><i class='bx bx-book-open'></i> Programme Détaillé</h3>
+                        <ul>
+                            <li>Technique de marche et démarche professionnelle</li>
+                            <li>Poses et attitudes sur podium</li>
+                            <li>Gestion de l'espace et du timing</li>
+                            <li>Expression corporelle et gestuelle</li>
+                            <li>Préparation physique et maintien</li>
+                            <li>Travail avec différents types de vêtements</li>
+                            <li>Gestion des accessoires (chaussures, sacs)</li>
+                            <li>Simulation de défilés réels</li>
+                            <li>Développement de la confiance en soi</li>
+                        </ul>
+                        
+                        <h3><i class='bx bx-check-circle'></i> Conditions d'Admission</h3>
+                        <ul>
+                            <li>Âge minimum : 16 ans</li>
+                            <li>Taille minimum : 1m72 (femmes) / 1m82 (hommes)</li>
+                            <li>Motivation et engagement</li>
+                            <li>Aucune expérience préalable requise</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="formation-sidebar">
+                        <h3>Informations Pratiques</h3>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-time'></i>
+                            <div>
+                                <strong>Durée</strong>
+                                <span>4 mois (16 semaines)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-calendar'></i>
+                            <div>
+                                <strong>Rythme</strong>
+                                <span>3 sessions par semaine</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-group'></i>
+                            <div>
+                                <strong>Groupe</strong>
+                                <span>Max 12 personnes</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-map'></i>
+                            <div>
+                                <strong>Lieu</strong>
+                                <span>Paris 8ème</span>
+                            </div>
+                        </div>
+                        
+                        <div class="price">2 500 €</div>
+                        
+                        <a href="inscription.html" class="btn" style="width: 100%; text-align: center;">S'inscrire maintenant</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="photo" class="formation-detail">
+                <div class="formation-header">
+                    <i class='bx bx-camera'></i>
+                    <h2>Formation Model Photo</h2>
+                </div>
+                <div class="formation-content">
+                    <div class="formation-info">
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-light);">
+                            Développez votre talent devant l'objectif et créez un portfolio professionnel qui vous ouvrira 
+                            les portes des plus grandes agences et magazines.
+                        </p>
+                        
+                        <h3><i class='bx bx-target-lock'></i> Objectifs de la Formation</h3>
+                        <ul>
+                            <li>Maîtriser les poses et expressions pour la photo</li>
+                            <li>Comprendre la lumière et les angles de prise de vue</li>
+                            <li>Développer son style personnel</li>
+                            <li>Créer un book professionnel complet</li>
+                            <li>Travailler avec photographes et directeurs artistiques</li>
+                        </ul>
+                        
+                        <h3><i class='bx bx-book-open'></i> Programme Détaillé</h3>
+                        <ul>
+                            <li>Techniques de pose (portrait, mode, beauté)</li>
+                            <li>Expression du visage et regard caméra</li>
+                            <li>Langage corporel et gestuelle</li>
+                            <li>Travail avec la lumière naturelle et artificielle</li>
+                            <li>Poses pour différents types de shooting</li>
+                            <li>Communication avec le photographe</li>
+                            <li>Préparation avant séance photo</li>
+                            <li>Création et développement du book</li>
+                            <li>Sessions photos professionnelles incluses</li>
+                        </ul>
+                        
+                        <h3><i class='bx bx-check-circle'></i> Conditions d'Admission</h3>
+                        <ul>
+                            <li>Âge minimum : 16 ans</li>
+                            <li>Photogénie et expressivité</li>
+                            <li>Motivation et créativité</li>
+                            <li>Portfolio existant bienvenu mais non obligatoire</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="formation-sidebar">
+                        <h3>Informations Pratiques</h3>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-time'></i>
+                            <div>
+                                <strong>Durée</strong>
+                                <span>3 mois (12 semaines)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-calendar'></i>
+                            <div>
+                                <strong>Rythme</strong>
+                                <span>2 sessions par semaine</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-group'></i>
+                            <div>
+                                <strong>Groupe</strong>
+                                <span>Max 8 personnes</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-map'></i>
+                            <div>
+                                <strong>Lieu</strong>
+                                <span>Paris 8ème</span>
+                            </div>
+                        </div>
+                        
+                        <div class="price">2 000 €</div>
+                        
+                        <a href="inscription.html" class="btn" style="width: 100%; text-align: center;">S'inscrire maintenant</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="management" class="formation-detail">
+                <div class="formation-header">
+                    <i class='bx bx-briefcase'></i>
+                    <h2>Formation Management</h2>
+                </div>
+                <div class="formation-content">
+                    <div class="formation-info">
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-light);">
+                            Découvrez les coulisses du mannequinat et formez-vous aux métiers du management d'agence, 
+                            du booking et de la gestion de carrière.
+                        </p>
+                        
+                        <h3><i class='bx bx-target-lock'></i> Objectifs de la Formation</h3>
+                        <ul>
+                            <li>Comprendre le fonctionnement d'une agence de mannequins</li>
+                            <li>Maîtriser les techniques de scouting et casting</li>
+                            <li>Apprendre la gestion de carrière</li>
+                            <li>Développer son réseau professionnel</li>
+                            <li>Connaître les aspects juridiques et contractuels</li>
+                        </ul>
+                        
+                        <h3><i class='bx bx-book-open'></i> Programme Détaillé</h3>
+                        <ul>
+                            <li>Structure et organisation d'une agence</li>
+                            <li>Scouting et détection de talents</li>
+                            <li>Techniques de casting et sélection</li>
+                            <li>Gestion de portfolio et books</li>
+                            <li>Marketing et promotion de mannequins</li>
+                            <li>Négociation de contrats</li>
+                            <li>Aspects juridiques du mannequinat</li>
+                            <li>Gestion des relations clients</li>
+                            <li>Organisation de défilés et événements</li>
+                            <li>Développement commercial</li>
+                        </ul>
+                        
+                        <h3><i class='bx bx-check-circle'></i> Conditions d'Admission</h3>
+                        <ul>
+                            <li>Âge minimum : 18 ans</li>
+                            <li>Intérêt pour l'industrie de la mode</li>
+                            <li>Capacités organisationnelles</li>
+                            <li>Sens du relationnel</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="formation-sidebar">
+                        <h3>Informations Pratiques</h3>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-time'></i>
+                            <div>
+                                <strong>Durée</strong>
+                                <span>6 mois (24 semaines)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-calendar'></i>
+                            <div>
+                                <strong>Rythme</strong>
+                                <span>2 sessions par semaine</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-group'></i>
+                            <div>
+                                <strong>Groupe</strong>
+                                <span>Max 15 personnes</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class='bx bx-map'></i>
+                            <div>
+                                <strong>Lieu</strong>
+                                <span>Paris 8ème</span>
+                            </div>
+                        </div>
+                        
+                        <div class="price">3 500 €</div>
+                        
+                        <a href="inscription.html" class="btn" style="width: 100%; text-align: center;">S'inscrire maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MODELS ACADEMY</h3>
+                    <p>Votre partenaire pour une carrière réussie dans le mannequinat.</p>
+                    <div class="social-links">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="formations.html">Formations</a></li>
+                        <li><a href="mannequins.html">Mannequins</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class='bx bx-phone'></i> +33 1 23 45 67 89</li>
+                        <li><i class='bx bx-envelope'></i> contact@modelsacademy.fr</li>
+                        <li><i class='bx bx-map'></i> Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

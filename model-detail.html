@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mannequin - MODELS ACADEMY MANAGEMENT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            height: 40vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 70px;
+        }
+        
+        .model-profile {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+        }
+        
+        .model-sidebar {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .model-main-photo {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .model-sidebar h2 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .model-specialty-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent-color);
+            color: var(--white);
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .model-measurements {
+            margin-top: 2rem;
+        }
+        
+        .model-measurements h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .measurement-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        
+        .measurement-item strong {
+            color: var(--text-dark);
+        }
+        
+        .measurement-item span {
+            color: var(--text-light);
+        }
+        
+        .model-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .model-content h3 {
+            color: var(--accent-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .polaroids-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .polaroids-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .portfolio-grid img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .portfolio-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        @media (max-width: 968px) {
+            .model-profile {
+                grid-template-columns: 1fr;
+            }
+            
+            .model-sidebar {
+                position: relative;
+                top: 0;
+            }
+            
+            .polaroids-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">MODELS <span>ACADEMY</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="mannequins.html">Mannequins</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <i class='bx bx-menu mobile-menu-btn'></i>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div>
+            <h1 id="modelName">Emma Laurent</h1>
+            <p style="font-size: 1.2rem; margin-top: 0.5rem;">Mannequin Professionnel</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="model-profile">
+                <div class="model-sidebar">
+                    <img id="mainPhoto" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600" alt="Emma Laurent" class="model-main-photo">
+                    
+                    <h2 id="sidebarName">Emma Laurent</h2>
+                    <span id="specialtyBadge" class="model-specialty-badge">Podium</span>
+                    
+                    <div class="model-measurements">
+                        <h3>Mensurations</h3>
+                        <div class="measurement-item">
+                            <strong>Taille</strong>
+                            <span id="height">1m78</span>
+                        </div>
+                        <div class="measurement-item">
+                            <strong>Poids</strong>
+                            <span id="weight">55 kg</span>
+                        </div>
+                        <div class="measurement-item">
+                            <strong>Âge</strong>
+                            <span id="age">22 ans</span>
+                        </div>
+                        <div class="measurement-item">
+                            <strong>Tour de poitrine</strong>
+                            <span id="bust">86 cm</span>
+                        </div>
+                        <div class="measurement-item">
+                            <strong>Tour de taille</strong>
+                            <span id="waist">60 cm</span>
+                        </div>
+                        <div class="measurement-item">
+                            <strong>Tour de hanches</strong>
+                            <span id="hips">89 cm</span>
+                        </div>
+                        <div class="measurement-item">
+                            <strong>Pointure</strong>
+                            <span id="shoes">38</span>
+                        </div>
+                        <div class="measurement-item">
+                            <strong>Couleur des yeux</strong>
+                            <span id="eyes">Marron</span>
+                        </div>
+                        <div class="measurement-item">
+                            <strong>Couleur des cheveux</strong>
+                            <span id="hair">Châtain</span>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn" style="width: 100%; text-align: center; margin-top: 2rem;">
+                        <i class='bx bx-envelope'></i> Contacter
+                    </a>
+                </div>
+                
+                <div class="model-content">
+                    <h3><i class='bx bx-image'></i> Polaroids</h3>
+                    <div class="polaroids-grid">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400" alt="Face">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Profil">
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400" alt="Plein pied">
+                    </div>
+                    
+                    <h3><i class='bx bx-camera'></i> Portfolio - Défilés</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">
+                        Emma a participé à de nombreux défilés prestigieux pour des marques de renom.
+                    </p>
+                    <div class="portfolio-grid">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600" alt="Défilé 1">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600" alt="Défilé 2">
+                    </div>
+                    
+                    <h3><i class='bx bx-image-alt'></i> Portfolio - Shootings Photo</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">
+                        Collaboration avec des photographes professionnels pour des campagnes de mode et magazines.
+                    </p>
+                    <div class="portfolio-grid">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600" alt="Shooting 1">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Shooting 2">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600" alt="Shooting 3">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=600" alt="Shooting 4">
+                    </div>
+                    
+                    <h3><i class='bx bx-trophy'></i> Expérience & Réalisations</h3>
+                    <ul style="color: var(--text-light); line-height: 2;">
+                        <li>Fashion Week Paris 2023 - Défilé Haute Couture</li>
+                        <li>Campagne publicitaire pour grande marque de cosmétiques</li>
+                        <li>Editorial pour Vogue France</li>
+                        <li>Défilés pour créateurs émergents</li>
+                        <li>Shooting pour campagne automne-hiver 2024</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center;">
+                <a href="mannequins.html" class="btn btn-secondary">
+                    <i class='bx bx-left-arrow-alt'></i> Retour à la liste
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MODELS ACADEMY</h3>
+                    <p>Votre partenaire pour une carrière réussie dans le mannequinat.</p>
+                    <div class="social-links">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="formations.html">Formations</a></li>
+                        <li><a href="mannequins.html">Mannequins</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class='bx bx-phone'></i> +33 1 23 45 67 89</li>
+                        <li><i class='bx bx-envelope'></i> contact@modelsacademy.fr</li>
+                        <li><i class='bx bx-map'></i> Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        const models = {
+            '1': {
+                name: 'Emma Laurent',
+                specialty: 'Podium',
+                photo: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600',
+                height: '1m78',
+                weight: '55 kg',
+                age: '22 ans',
+                bust: '86 cm',
+                waist: '60 cm',
+                hips: '89 cm',
+                shoes: '38',
+                eyes: 'Marron',
+                hair: 'Châtain'
+            },
+            '2': {
+                name: 'Sophie Dubois',
+                specialty: 'Photo',
+                photo: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600',
+                height: '1m75',
+                weight: '52 kg',
+                age: '24 ans',
+                bust: '84 cm',
+                waist: '58 cm',
+                hips: '87 cm',
+                shoes: '37',
+                eyes: 'Bleu',
+                hair: 'Blond'
+            }
+        };
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const modelId = urlParams.get('id') || '1';
+        const model = models[modelId] || models['1'];
+        
+        document.getElementById('modelName').textContent = model.name;
+        document.getElementById('sidebarName').textContent = model.name;
+        document.getElementById('specialtyBadge').textContent = model.specialty;
+        document.getElementById('mainPhoto').src = model.photo;
+        document.getElementById('height').textContent = model.height;
+        document.getElementById('weight').textContent = model.weight;
+        document.getElementById('age').textContent = model.age;
+        document.getElementById('bust').textContent = model.bust;
+        document.getElementById('waist').textContent = model.waist;
+        document.getElementById('hips').textContent = model.hips;
+        document.getElementById('shoes').textContent = model.shoes;
+        document.getElementById('eyes').textContent = model.eyes;
+        document.getElementById('hair').textContent = model.hair;
+    </script>
+</body>
+</html>
