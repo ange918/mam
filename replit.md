@@ -114,6 +114,34 @@ Site web complet développé en HTML, CSS et JavaScript vanilla pour MODELS ACAD
 - **Google Fonts** - Police Poppins
 - **Python 3.11** - Serveur HTTP simple
 
+## Design
+
+Le site utilise une palette de couleurs minimaliste **blanc et noir** pour un look professionnel et élégant :
+- **Fond** : Blanc (#ffffff) pour la pureté et la clarté
+- **Texte principal** : Noir (#000000) pour la lisibilité
+- **Texte secondaire** : Gris (#666666, #999999) pour la hiérarchie visuelle
+- **Boutons CTA** : Noir avec texte blanc pour un contraste fort
+- **Bordures** : Gris clair (#e5e5e5) pour les séparations subtiles
+
+### Pages Mannequins (Design Spécifique)
+
+**mannequins.html** - Liste des mannequins
+- Grille 2 colonnes responsive
+- Grandes photos professionnelles (500px de hauteur)
+- Nom du mannequin en titre élégant
+- Spécialité en texte gris
+- Bouton noir "EN SAVOIR PLUS" avec icône plus
+
+**model-detail.html** - Profil individuel
+- Layout en deux colonnes : photo (400px) à gauche, informations à droite
+- Section "À propos" avec icônes et grille d'informations (Taille, Cheveux, Yeux, Ville, Expérience)
+- Section "Mensurations" avec 4 boîtes (Buste, Taille, Hanches, Pointure)
+- Section "Galeries" avec 3 onglets interactifs :
+  - Portfolio : Photos principales du mannequin
+  - Fashion Show : Photos de défilés
+  - Shooting : Photos de séances photo
+- Grille de photos responsive (3 colonnes sur desktop, 1 sur mobile)
+
 ## Fonctionnalités
 
 ### Design & UX
