@@ -233,6 +233,34 @@ Les couleurs principales sont définies dans `styles.css` via des variables CSS 
 
 Novembre 2024
 
+## Mises à Jour Récentes (Novembre 2025)
+
+### Améliorations UI/UX
+- **Hero Section Assombrie** : Overlay à 0.65 pour meilleure lisibilité du texte
+- **Transitions Fluides** : Animations fadeIn sur le body et les images avec Intersection Observer
+- **Gestion Manuelle des Images** : Système configurable pour portfolio/fashion/shooting photos
+
+### Configuration des Images de Portfolio
+
+Dans `model-detail.html`, chaque mannequin possède trois tableaux configurables :
+- `portfolioPhotos` : Photos de portfolio
+- `fashionPhotos` : Photos de défilés
+- `shootingPhotos` : Photos de séances
+
+Pour ajouter des images, insérez les chemins dans ces tableaux :
+```javascript
+portfolioPhotos: [
+    'images/mannequin_portfolio1.jpg',
+    'images/mannequin_portfolio2.jpg'
+],
+fashionPhotos: [
+    'images/mannequin_fashion1.jpg'
+],
+shootingPhotos: [
+    'images/mannequin_shooting1.jpg'
+]
+```
+
 ## Notes Techniques
 
 - Le serveur utilise `allow_reuse_address` pour permettre les redémarrages rapides
