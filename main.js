@@ -3,8 +3,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('nav');
     
     if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             nav.classList.toggle('active');
+            this.classList.toggle('active');
+            if (this.classList.contains('active')) {
+                this.classList.remove('bx-menu');
+                this.classList.add('bx-x');
+            } else {
+                this.classList.remove('bx-x');
+                this.classList.add('bx-menu');
+            }
+        });
+        
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+                mobileMenuBtn.classList.remove('bx-x');
+                mobileMenuBtn.classList.add('bx-menu');
+            });
         });
     }
 

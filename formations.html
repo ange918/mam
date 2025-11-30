@@ -13,33 +13,6 @@
             font-weight: 300;
         }
         
-        .back-btn {
-            position: fixed;
-            top: 90px;
-            left: 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            background: #000000;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            z-index: 100;
-            text-transform: uppercase;
-        }
-        
-        .back-btn:hover {
-            background: #333333;
-        }
-        
-        .back-btn i {
-            font-size: 1.2rem;
-        }
-        
         .page-hero {
             height: 50vh;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558769132-cb1aea3c3000?w=1600') center/cover;
@@ -202,13 +175,6 @@
                 font-size: 2rem;
                 letter-spacing: 4px;
             }
-            
-            .back-btn {
-                top: 80px;
-                left: 10px;
-                padding: 8px 15px;
-                font-size: 0.75rem;
-            }
         }
     </style>
 </head>
@@ -216,8 +182,7 @@
     <header>
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">MA</div>
-                MODELS <span>ACADEMY</span>
+                <img src="img/models academy.jpg" alt="Models Academy" class="logo-img">
             </a>
             <nav>
                 <ul>
@@ -232,10 +197,6 @@
             <i class='bx bx-menu mobile-menu-btn'></i>
         </div>
     </header>
-
-    <a href="javascript:history.back()" class="back-btn">
-        <i class='bx bx-arrow-back'></i> RETOUR
-    </a>
 
     <section class="page-hero">
         <h1>NOS FORMATIONS</h1>

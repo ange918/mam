@@ -284,8 +284,7 @@
     <header>
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">MA</div>
-                MODELS <span>ACADEMY</span>
+                <img src="img/models academy.jpg" alt="Models Academy" class="logo-img">
             </a>
             <nav>
                 <ul>
@@ -457,11 +456,37 @@
 
     <script src="main.js"></script>
     <script>
+        const modelPhotos = {
+            '1': 'img/olerie2.jpg',
+            '2': 'img/rita.jpeg',
+            '3': 'img/prisca.jpg',
+            '5': 'img/joana.jpg',
+            '6': 'img/aurelle.jpg',
+            '7': 'img/danielle.jpg',
+            '8': 'img/lucia7.jpg',
+            '10': 'img/rose.jpg',
+            '11': 'img/merveille.jpg',
+            '12': 'img/michelle.jpg',
+            '13': 'img/mathieu.jpg',
+            '14': 'img/barnard2.jpg',
+            '15': 'img/roderic.jpg',
+            '16': 'img/cyr2.jpg',
+            '17': 'img/dalil.jpg',
+            '19': 'img/gildas.jpg',
+            '21': 'img/geordys.jpg',
+            '22': 'img/jediel.jpg',
+            '24': 'img/pascal.jpg',
+            '25': 'img/meshac.jpeg'
+        };
+
+        const defaultWomenPhoto = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800';
+        const defaultMenPhoto = 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800';
+
         const models = {
             '1': {
                 name: 'TOUNDOH OLERIE',
                 specialty: 'Podium',
-                photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800',
+                photo: modelPhotos['1'],
                 bio: 'Mannequin professionnelle spécialisée en podium et défilés de mode.',
                 height: '1m75',
                 hair: 'Noir',
@@ -472,26 +497,14 @@
                 waist: '62cm',
                 hips: '89cm',
                 shoeSize: '39 EU',
-                portfolioPhotos: [
-                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600',
-                    'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600',
-                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600'
-                ],
-                fashionPhotos: [
-                    'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600',
-                    'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600',
-                    'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600'
-                ],
-                shootingPhotos: [
-                    'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600',
-                    'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600',
-                    'https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=600'
-                ]
+                portfolioPhotos: [modelPhotos['1']],
+                fashionPhotos: [],
+                shootingPhotos: []
             },
             '2': {
                 name: 'AZONWANOU RITA',
                 specialty: 'Photo',
-                photo: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800',
+                photo: modelPhotos['2'],
                 bio: 'Mannequin photo avec une grande expressivité devant l\'objectif.',
                 height: '1m72',
                 hair: 'Noir',
@@ -502,26 +515,14 @@
                 waist: '60cm',
                 hips: '90cm',
                 shoeSize: '38 EU',
-                portfolioPhotos: [
-                    'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600',
-                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600',
-                    'https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=600'
-                ],
-                fashionPhotos: [
-                    'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600',
-                    'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600',
-                    'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600'
-                ],
-                shootingPhotos: [
-                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600',
-                    'https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=600',
-                    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600'
-                ]
+                portfolioPhotos: [modelPhotos['2']],
+                fashionPhotos: [],
+                shootingPhotos: []
             },
             '3': {
                 name: 'AGBEWANOU PRISCA',
                 specialty: 'Mixte',
-                photo: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800',
+                photo: modelPhotos['3'],
                 bio: 'Mannequin polyvalente excellant aussi bien sur le podium que devant l\'objectif.',
                 height: '1m78',
                 hair: 'Noir',
@@ -532,64 +533,25 @@
                 waist: '62cm',
                 hips: '88cm',
                 shoeSize: '39 EU',
-                portfolioPhotos: [
-                    'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600',
-                    'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600',
-                    'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600'
-                ],
-                fashionPhotos: [
-                    'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600',
-                    'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600',
-                    'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600'
-                ],
-                shootingPhotos: [
-                    'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600',
-                    'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600',
-                    'https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=600'
-                ]
+                portfolioPhotos: [modelPhotos['3']],
+                fashionPhotos: [],
+                shootingPhotos: []
             }
         };
 
+        const womenNames = ['SENOU PAULA', 'AGBOGNON JOANA', 'EDJO AURELLE', 'GBAGUIDI DANIELLE', 'LUCIA PADONOU', 'KHADY TRAORÉ', 'HOUDJREGBO ROSE', 'MISSIHOUN MERVEILLE', 'DATO MARIE-MICHÈLLE'];
+        const menNames = ['AKPO MATHIEU', 'YEHOUN BARNARD', 'AMAH RODERIC', 'HESSOU CYR-GOD', 'FAMIWA DALIL', 'SAGBO AMEN', 'MIDJINDOU GILDAS', 'HOUNGBEDJI ABOU-BACAR', 'GBEDEGLA GEORDYS', 'VODOUNON JÉDIEL', 'TOSSOU RAFIOU HONEL', 'ADANTOLANKPE PASCAL', 'SEKPO MESHACK', 'YAO TAMEWA NERI'];
+
         for (let i = 4; i <= 26; i++) {
             const isWoman = i <= 12;
-            const womenNames = ['SENOU PAULA', 'AGBOGNON JOANA', 'EDJO AURELLE', 'GBAGUIDI DANIELLE', 'LUCIA PADONOU', 'KHADY TRAORÉ', 'HOUDJREGBO ROSE', 'MISSIHOUN MERVEILLE', 'DATO MARIE-MICHÈLLE'];
-            const menNames = ['AKPO MATHIEU', 'YEHOUN BARNARD', 'AMAH RODERIC', 'HESSOU CYR-GOD', 'FAMIWA DALIL', 'SAGBO AMEN', 'MIDJINDOU GILDAS', 'HOUNGBEDJI ABOU-BACAR', 'GBEDEGLA GEORDYS', 'VODOUNON JÉDIEL', 'TOSSOU RAFIOU HONEL', 'ADANTOLANKPE PASCAL', 'SEKPO MESHACK', 'YAO TAMEWA NERI'];
-            
-            const womenPhotos = [
-                'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800',
-                'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800',
-                'https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=800',
-                'https://images.unsplash.com/photo-1496440737103-cd596325d314?w=800',
-                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800',
-                'https://images.unsplash.com/photo-1485893226355-9a1c32a0c81e?w=800',
-                'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800',
-                'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=800',
-                'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800'
-            ];
-            
-            const menPhotos = [
-                'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800',
-                'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
-                'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800',
-                'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800',
-                'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800',
-                'https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800',
-                'https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?w=800',
-                'https://images.unsplash.com/photo-1463453091185-61582044d556?w=800',
-                'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800',
-                'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=800',
-                'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800',
-                'https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?w=800',
-                'https://images.unsplash.com/photo-1548372290-8d01b6c8e78c?w=800',
-                'https://images.unsplash.com/photo-1557862921-37829c790f19?w=800'
-            ];
+            const photo = modelPhotos[i] || (isWoman ? defaultWomenPhoto : defaultMenPhoto);
             
             if (isWoman) {
                 const idx = i - 4;
                 models[i] = {
                     name: womenNames[idx],
                     specialty: 'Podium',
-                    photo: womenPhotos[idx],
+                    photo: photo,
                     bio: 'Mannequin professionnelle formée à Models Academy Management.',
                     height: '1m' + (72 + Math.floor(Math.random() * 8)),
                     hair: 'Noir',
@@ -600,16 +562,16 @@
                     waist: (58 + Math.floor(Math.random() * 6)) + 'cm',
                     hips: (86 + Math.floor(Math.random() * 8)) + 'cm',
                     shoeSize: (37 + Math.floor(Math.random() * 4)) + ' EU',
-                    portfolioPhotos: womenPhotos.slice(0, 3),
-                    fashionPhotos: womenPhotos.slice(3, 6),
-                    shootingPhotos: womenPhotos.slice(6, 9)
+                    portfolioPhotos: modelPhotos[i] ? [modelPhotos[i]] : [],
+                    fashionPhotos: [],
+                    shootingPhotos: []
                 };
             } else {
                 const idx = i - 13;
                 models[i] = {
                     name: menNames[idx],
                     specialty: 'Podium',
-                    photo: menPhotos[idx],
+                    photo: photo,
                     bio: 'Mannequin professionnel formé à Models Academy Management.',
                     height: '1m' + (78 + Math.floor(Math.random() * 10)),
                     hair: 'Noir',
@@ -620,9 +582,9 @@
                     waist: (75 + Math.floor(Math.random() * 8)) + 'cm',
                     hips: (92 + Math.floor(Math.random() * 8)) + 'cm',
                     shoeSize: (41 + Math.floor(Math.random() * 4)) + ' EU',
-                    portfolioPhotos: menPhotos.slice(0, 3),
-                    fashionPhotos: menPhotos.slice(3, 6),
-                    shootingPhotos: menPhotos.slice(6, 9)
+                    portfolioPhotos: modelPhotos[i] ? [modelPhotos[i]] : [],
+                    fashionPhotos: [],
+                    shootingPhotos: []
                 };
             }
         }
