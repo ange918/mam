@@ -7,7 +7,7 @@ Site web moderne et professionnel pour une agence de mannequins spécialisée da
 Site web complet développé en HTML, CSS et JavaScript vanilla pour MODELS ACADEMY MANAGEMENT. Le site présente une agence de formation de mannequins avec trois spécialités :
 - Formation Mannequin Podium
 - Formation Model Photo
-- Formation Management
+- Formation Développement Personnel
 
 ## Structure du Site
 
@@ -15,10 +15,11 @@ Site web complet développé en HTML, CSS et JavaScript vanilla pour MODELS ACAD
 
 1. **index.html** - Page d'accueil
    - Section hero plein écran
-   - Présentation de l'agence
+   - Section À propos avec photo et texte en 2 colonnes
    - Statistiques animées (mannequins formés, défilés, projets photos, années d'expérience)
    - Aperçu des 3 formations
    - FAQ interactive avec accordéon
+   - Section Blog avec 3 articles
    - Call-to-action pour l'inscription
 
 2. **about.html** - À propos
@@ -33,11 +34,13 @@ Site web complet développé en HTML, CSS et JavaScript vanilla pour MODELS ACAD
    - Détails complets des 3 formations :
      * Mannequin Podium (2 500 €, 4 mois)
      * Model Photo (2 000 €, 3 mois)
-     * Management (3 500 €, 6 mois)
+     * Développement Personnel (3 500 €, 6 mois)
    - Pour chaque formation : objectifs, programme, durée, conditions, prix
 
 4. **mannequins.html** - Nos mannequins
-   - Liste de 6 mannequins en cartes
+   - Liste de 26 mannequins (12 femmes, 14 hommes)
+   - Onglets de filtrage (TOUT / FEMME / HOMME)
+   - Bouton retour
    - Navigation vers les profils individuels
 
 5. **model-detail.html** - Profil mannequin dynamique
