@@ -3,13 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Mannequin - MODELS ACADEMY MANAGEMENT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>PROFIL MANNEQUIN - MODELS ACADEMY MANAGEMENT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
             background: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            z-index: 100;
+            text-transform: uppercase;
+        }
+        
+        .back-btn:hover {
+            background: #333333;
+        }
+        
+        .back-btn i {
+            font-size: 1.2rem;
         }
         
         .profile-header {
@@ -19,10 +48,12 @@
         }
         
         .profile-header h1 {
+            font-family: 'Cormorant Garamond', serif;
             font-size: 2.5rem;
-            font-weight: 400;
-            letter-spacing: 2px;
+            font-weight: 300;
+            letter-spacing: 5px;
             color: #000000;
+            text-transform: uppercase;
         }
         
         .profile-container {
@@ -45,11 +76,13 @@
         }
         
         .section-title {
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
             color: #000000;
             margin-bottom: 25px;
-            letter-spacing: 0.5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
         
         .about-section {
@@ -59,8 +92,9 @@
         .about-description {
             color: #666666;
             font-size: 0.9rem;
-            line-height: 1.6;
+            line-height: 1.8;
             margin-bottom: 25px;
+            font-weight: 300;
         }
         
         .info-grid {
@@ -82,15 +116,17 @@
         }
         
         .info-label {
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             color: #999999;
             display: block;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         
         .info-value {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #000000;
-            font-weight: 500;
+            font-weight: 400;
         }
         
         .measurements-section {
@@ -110,16 +146,19 @@
         }
         
         .measurement-label {
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             color: #999999;
             margin-bottom: 8px;
             display: block;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         
         .measurement-value {
-            font-size: 1.1rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
             color: #000000;
-            font-weight: 500;
+            font-weight: 400;
         }
         
         .galleries-section {
@@ -128,20 +167,30 @@
         
         .gallery-tabs {
             display: flex;
-            gap: 15px;
+            gap: 0;
             margin-bottom: 30px;
+            border: 1px solid #000000;
+            max-width: 500px;
         }
         
         .gallery-tab {
-            padding: 12px 30px;
+            flex: 1;
+            padding: 12px 20px;
             background: #ffffff;
-            border: 1px solid #000000;
+            border: none;
+            border-right: 1px solid #000000;
             color: #000000;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
             cursor: pointer;
             transition: all 0.3s ease;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .gallery-tab:last-child {
+            border-right: none;
         }
         
         .gallery-tab.active {
@@ -205,10 +254,28 @@
             
             .gallery-tabs {
                 flex-direction: column;
+                max-width: 100%;
+            }
+            
+            .gallery-tab {
+                border-right: none;
+                border-bottom: 1px solid #000000;
+            }
+            
+            .gallery-tab:last-child {
+                border-bottom: none;
             }
             
             .profile-header h1 {
                 font-size: 2rem;
+                letter-spacing: 3px;
+            }
+            
+            .back-btn {
+                top: 80px;
+                left: 10px;
+                padding: 8px 15px;
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -219,20 +286,24 @@
             <a href="index.html" class="logo">MODELS <span>ACADEMY</span></a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="formations.html">Formations</a></li>
-                    <li><a href="mannequins.html">Nos Mannequins</a></li>
-                    <li><a href="inscription.html">S'inscrire</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="about.html">À PROPOS</a></li>
+                    <li><a href="formations.html">FORMATIONS</a></li>
+                    <li><a href="mannequins.html" class="active">MANNEQUINS</a></li>
+                    <li><a href="inscription.html">S'INSCRIRE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
             <i class='bx bx-menu mobile-menu-btn'></i>
         </div>
     </header>
 
+    <a href="mannequins.html" class="back-btn">
+        <i class='bx bx-arrow-back'></i> RETOUR
+    </a>
+
     <section class="profile-header">
-        <h1 id="modelName">Emma Laurent</h1>
+        <h1 id="modelName">MANNEQUIN</h1>
     </section>
 
     <div class="profile-container">
@@ -242,14 +313,14 @@
         
         <div class="profile-details">
             <div class="about-section">
-                <h2 class="section-title">À propos</h2>
+                <h2 class="section-title">À PROPOS</h2>
                 <p class="about-description" id="modelBio"></p>
                 
                 <div class="info-grid">
                     <div class="info-item">
                         <i class='bx bx-ruler'></i>
                         <div>
-                            <span class="info-label">Taille</span>
+                            <span class="info-label">TAILLE</span>
                             <span class="info-value" id="modelHeight"></span>
                         </div>
                     </div>
@@ -257,7 +328,7 @@
                     <div class="info-item">
                         <i class='bx bx-palette'></i>
                         <div>
-                            <span class="info-label">Cheveux</span>
+                            <span class="info-label">CHEVEUX</span>
                             <span class="info-value" id="modelHair"></span>
                         </div>
                     </div>
@@ -265,7 +336,7 @@
                     <div class="info-item">
                         <i class='bx bx-show'></i>
                         <div>
-                            <span class="info-label">Yeux</span>
+                            <span class="info-label">YEUX</span>
                             <span class="info-value" id="modelEyes"></span>
                         </div>
                     </div>
@@ -273,7 +344,7 @@
                     <div class="info-item">
                         <i class='bx bx-map'></i>
                         <div>
-                            <span class="info-label">Ville</span>
+                            <span class="info-label">VILLE</span>
                             <span class="info-value" id="modelCity"></span>
                         </div>
                     </div>
@@ -281,7 +352,7 @@
                     <div class="info-item">
                         <i class='bx bx-time'></i>
                         <div>
-                            <span class="info-label">Expérience</span>
+                            <span class="info-label">EXPÉRIENCE</span>
                             <span class="info-value" id="modelExperience"></span>
                         </div>
                     </div>
@@ -289,43 +360,43 @@
             </div>
             
             <div class="measurements-section">
-                <h2 class="section-title">Mensurations</h2>
+                <h2 class="section-title">MENSURATIONS</h2>
                 
                 <div class="measurements-grid">
                     <div class="measurement-box">
-                        <span class="measurement-label">Buste</span>
+                        <span class="measurement-label">BUSTE</span>
                         <span class="measurement-value" id="modelBust"></span>
                     </div>
                     
                     <div class="measurement-box">
-                        <span class="measurement-label">Taille</span>
+                        <span class="measurement-label">TAILLE</span>
                         <span class="measurement-value" id="modelWaist"></span>
                     </div>
                     
                     <div class="measurement-box">
-                        <span class="measurement-label">Hanches</span>
+                        <span class="measurement-label">HANCHES</span>
                         <span class="measurement-value" id="modelHips"></span>
                     </div>
                     
                     <div class="measurement-box">
-                        <span class="measurement-label">Pointure</span>
+                        <span class="measurement-label">POINTURE</span>
                         <span class="measurement-value" id="modelShoeSize"></span>
                     </div>
                 </div>
             </div>
             
             <div class="galleries-section">
-                <h2 class="section-title">Galeries</h2>
+                <h2 class="section-title">GALERIES</h2>
                 
                 <div class="gallery-tabs">
                     <button class="gallery-tab active" data-gallery="portfolio">
-                        <i class='bx bx-image'></i> Portfolio
+                        <i class='bx bx-image'></i> PORTFOLIO
                     </button>
                     <button class="gallery-tab" data-gallery="fashion">
-                        <i class='bx bx-walk'></i> Fashion Show
+                        <i class='bx bx-walk'></i> FASHION SHOW
                     </button>
                     <button class="gallery-tab" data-gallery="shooting">
-                        <i class='bx bx-camera'></i> Shooting
+                        <i class='bx bx-camera'></i> SHOOTING
                     </button>
                 </div>
                 
@@ -358,7 +429,7 @@
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Liens Rapides</h3>
+                    <h3>LIENS RAPIDES</h3>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="about.html">À propos</a></li>
@@ -368,16 +439,15 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact</h3>
+                    <h3>CONTACT</h3>
                     <ul>
-                        <li><i class='bx bx-phone'></i> +33 1 23 45 67 89</li>
-                        <li><i class='bx bx-envelope'></i> contact@modelsacademy.fr</li>
-                        <li><i class='bx bx-map'></i> Paris, France</li>
+                        <li><i class='bx bx-phone'></i> +229 69 89 69 50</li>
+                        <li><i class='bx bx-map'></i> Calavi Bidossessi, derrière la clôture de l'ORTB</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. Tous droits réservés.</p>
+                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. TOUS DROITS RÉSERVÉS.</p>
             </div>
         </div>
     </footer>
@@ -386,24 +456,23 @@
     <script>
         const models = {
             '1': {
-                name: 'Emma Laurent',
+                name: 'TOUNDOH OLERIE',
                 specialty: 'Podium',
-                photo: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800',
-                bio: 'Experte en beauté et mode commerciale, visage photogénique',
-                height: '1m78',
+                photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800',
+                bio: 'Mannequin professionnelle spécialisée en podium et défilés de mode.',
+                height: '1m75',
                 hair: 'Noir',
                 eyes: 'Marron',
                 city: 'Cotonou',
-                experience: '3 ans',
+                experience: '2 ans',
                 bust: '84cm',
-                waist: '102cm',
+                waist: '62cm',
                 hips: '89cm',
-                shoeSize: '42 EU',
+                shoeSize: '39 EU',
                 portfolioPhotos: [
-                    'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600',
+                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600',
                     'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600',
-                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600',
-                    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600'
+                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600'
                 ],
                 fashionPhotos: [
                     'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600',
@@ -417,23 +486,22 @@
                 ]
             },
             '2': {
-                name: 'Sophie Dubois',
+                name: 'AZONWANOU RITA',
                 specialty: 'Photo',
-                photo: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800',
-                bio: 'Experte en beauté et mode commerciale, visage photogénique',
-                height: '1m75',
-                hair: 'Châtain',
-                eyes: 'Bleu',
-                city: 'Lyon',
-                experience: '5 ans',
+                photo: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800',
+                bio: 'Mannequin photo avec une grande expressivité devant l\'objectif.',
+                height: '1m72',
+                hair: 'Noir',
+                eyes: 'Marron',
+                city: 'Cotonou',
+                experience: '3 ans',
                 bust: '86cm',
                 waist: '60cm',
                 hips: '90cm',
                 shoeSize: '38 EU',
                 portfolioPhotos: [
-                    'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600',
-                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600',
                     'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600',
+                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600',
                     'https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=600'
                 ],
                 fashionPhotos: [
@@ -448,24 +516,23 @@
                 ]
             },
             '3': {
-                name: 'Léa Martin',
+                name: 'AGBEWANOU PRISCA',
                 specialty: 'Mixte',
-                photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800',
-                bio: 'Experte en beauté et mode commerciale, visage photogénique',
-                height: '1m80',
-                hair: 'Blond',
-                eyes: 'Vert',
-                city: 'Paris',
+                photo: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800',
+                bio: 'Mannequin polyvalente excellant aussi bien sur le podium que devant l\'objectif.',
+                height: '1m78',
+                hair: 'Noir',
+                eyes: 'Marron',
+                city: 'Cotonou',
                 experience: '4 ans',
                 bust: '85cm',
                 waist: '62cm',
                 hips: '88cm',
                 shoeSize: '39 EU',
                 portfolioPhotos: [
-                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600',
+                    'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600',
                     'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600',
-                    'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600',
-                    'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600'
+                    'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600'
                 ],
                 fashionPhotos: [
                     'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600',
@@ -477,101 +544,85 @@
                     'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600',
                     'https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=600'
                 ]
-            },
-            '4': {
-                name: 'Clara Bernard',
-                specialty: 'Podium',
-                photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800',
-                bio: 'Experte en beauté et mode commerciale, visage photogénique',
-                height: '1m79',
-                hair: 'Roux',
-                eyes: 'Noisette',
-                city: 'Nice',
-                experience: '6 ans',
-                bust: '87cm',
-                waist: '61cm',
-                hips: '91cm',
-                shoeSize: '40 EU',
-                portfolioPhotos: [
-                    'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600',
-                    'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600',
-                    'https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=600',
-                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600'
-                ],
-                fashionPhotos: [
-                    'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600',
-                    'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600',
-                    'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600'
-                ],
-                shootingPhotos: [
-                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600',
-                    'https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=600',
-                    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600'
-                ]
-            },
-            '5': {
-                name: 'Marie Rousseau',
-                specialty: 'Photo',
-                photo: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800',
-                bio: 'Experte en beauté et mode commerciale, visage photogénique',
-                height: '1m76',
-                hair: 'Brun',
-                eyes: 'Marron',
-                city: 'Marseille',
-                experience: '7 ans',
-                bust: '88cm',
-                waist: '63cm',
-                hips: '92cm',
-                shoeSize: '39 EU',
-                portfolioPhotos: [
-                    'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600',
-                    'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600',
-                    'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600',
-                    'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600'
-                ],
-                fashionPhotos: [
-                    'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600',
-                    'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600',
-                    'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600'
-                ],
-                shootingPhotos: [
-                    'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600',
-                    'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600',
-                    'https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=600'
-                ]
-            },
-            '6': {
-                name: 'Julie Petit',
-                specialty: 'Mixte',
-                photo: 'https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=800',
-                bio: 'Experte en beauté et mode commerciale, visage photogénique',
-                height: '1m77',
-                hair: 'Noir',
-                eyes: 'Bleu',
-                city: 'Bordeaux',
-                experience: '2 ans',
-                bust: '84cm',
-                waist: '59cm',
-                hips: '87cm',
-                shoeSize: '38 EU',
-                portfolioPhotos: [
-                    'https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=600',
-                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600',
-                    'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600',
-                    'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600'
-                ],
-                fashionPhotos: [
-                    'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600',
-                    'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600',
-                    'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600'
-                ],
-                shootingPhotos: [
-                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600',
-                    'https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=600',
-                    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600'
-                ]
             }
         };
+
+        for (let i = 4; i <= 26; i++) {
+            const isWoman = i <= 12;
+            const womenNames = ['SENOU PAULA', 'AGBOGNON JOANA', 'EDJO AURELLE', 'GBAGUIDI DANIELLE', 'LUCIA PADONOU', 'KHADY TRAORÉ', 'HOUDJREGBO ROSE', 'MISSIHOUN MERVEILLE', 'DATO MARIE-MICHÈLLE'];
+            const menNames = ['AKPO MATHIEU', 'YEHOUN BARNARD', 'AMAH RODERIC', 'HESSOU CYR-GOD', 'FAMIWA DALIL', 'SAGBO AMEN', 'MIDJINDOU GILDAS', 'HOUNGBEDJI ABOU-BACAR', 'GBEDEGLA GEORDYS', 'VODOUNON JÉDIEL', 'TOSSOU RAFIOU HONEL', 'ADANTOLANKPE PASCAL', 'SEKPO MESHACK', 'YAO TAMEWA NERI'];
+            
+            const womenPhotos = [
+                'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800',
+                'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800',
+                'https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=800',
+                'https://images.unsplash.com/photo-1496440737103-cd596325d314?w=800',
+                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800',
+                'https://images.unsplash.com/photo-1485893226355-9a1c32a0c81e?w=800',
+                'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800',
+                'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=800',
+                'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800'
+            ];
+            
+            const menPhotos = [
+                'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800',
+                'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
+                'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800',
+                'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800',
+                'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800',
+                'https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800',
+                'https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?w=800',
+                'https://images.unsplash.com/photo-1463453091185-61582044d556?w=800',
+                'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800',
+                'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=800',
+                'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800',
+                'https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?w=800',
+                'https://images.unsplash.com/photo-1548372290-8d01b6c8e78c?w=800',
+                'https://images.unsplash.com/photo-1557862921-37829c790f19?w=800'
+            ];
+            
+            if (isWoman) {
+                const idx = i - 4;
+                models[i] = {
+                    name: womenNames[idx],
+                    specialty: 'Podium',
+                    photo: womenPhotos[idx],
+                    bio: 'Mannequin professionnelle formée à Models Academy Management.',
+                    height: '1m' + (72 + Math.floor(Math.random() * 8)),
+                    hair: 'Noir',
+                    eyes: 'Marron',
+                    city: 'Cotonou',
+                    experience: (1 + Math.floor(Math.random() * 5)) + ' ans',
+                    bust: (82 + Math.floor(Math.random() * 8)) + 'cm',
+                    waist: (58 + Math.floor(Math.random() * 6)) + 'cm',
+                    hips: (86 + Math.floor(Math.random() * 8)) + 'cm',
+                    shoeSize: (37 + Math.floor(Math.random() * 4)) + ' EU',
+                    portfolioPhotos: womenPhotos.slice(0, 3),
+                    fashionPhotos: womenPhotos.slice(3, 6),
+                    shootingPhotos: womenPhotos.slice(6, 9)
+                };
+            } else {
+                const idx = i - 13;
+                models[i] = {
+                    name: menNames[idx],
+                    specialty: 'Podium',
+                    photo: menPhotos[idx],
+                    bio: 'Mannequin professionnel formé à Models Academy Management.',
+                    height: '1m' + (78 + Math.floor(Math.random() * 10)),
+                    hair: 'Noir',
+                    eyes: 'Marron',
+                    city: 'Cotonou',
+                    experience: (1 + Math.floor(Math.random() * 5)) + ' ans',
+                    bust: (92 + Math.floor(Math.random() * 10)) + 'cm',
+                    waist: (75 + Math.floor(Math.random() * 8)) + 'cm',
+                    hips: (92 + Math.floor(Math.random() * 8)) + 'cm',
+                    shoeSize: (41 + Math.floor(Math.random() * 4)) + ' EU',
+                    portfolioPhotos: menPhotos.slice(0, 3),
+                    fashionPhotos: menPhotos.slice(3, 6),
+                    shootingPhotos: menPhotos.slice(6, 9)
+                };
+            }
+        }
 
         const urlParams = new URLSearchParams(window.location.search);
         const modelId = urlParams.get('id');
@@ -615,21 +666,16 @@
                 img.alt = 'Shooting';
                 shootingGrid.appendChild(img);
             });
-            
-            document.title = model.name + ' - MODELS ACADEMY MANAGEMENT';
         }
         
-        const galleryTabs = document.querySelectorAll('.gallery-tab');
-        const galleryContents = document.querySelectorAll('.gallery-content');
-        
-        galleryTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                galleryTabs.forEach(t => t.classList.remove('active'));
-                galleryContents.forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.gallery-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.gallery-content').forEach(c => c.classList.remove('active'));
                 
-                tab.classList.add('active');
-                const galleryType = tab.getAttribute('data-gallery');
-                document.getElementById(galleryType + '-gallery').classList.add('active');
+                this.classList.add('active');
+                const gallery = this.getAttribute('data-gallery');
+                document.getElementById(gallery + '-gallery').classList.add('active');
             });
         });
     </script>

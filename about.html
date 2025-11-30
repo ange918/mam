@@ -3,11 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos - MODELS ACADEMY MANAGEMENT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>À PROPOS - MODELS ACADEMY MANAGEMENT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            z-index: 100;
+            text-transform: uppercase;
+        }
+        
+        .back-btn:hover {
+            background: #333333;
+        }
+        
+        .back-btn i {
+            font-size: 1.2rem;
+        }
+        
         .page-hero {
             height: 50vh;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600') center/cover;
@@ -20,8 +52,11 @@
         }
         
         .page-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
             font-size: 3rem;
-            letter-spacing: 2px;
+            font-weight: 300;
+            letter-spacing: 8px;
+            text-transform: uppercase;
         }
         
         .about-content {
@@ -33,19 +68,25 @@
         
         .about-content img {
             width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
         .about-text h3 {
-            color: var(--accent-color);
+            color: var(--primary-color);
             margin-bottom: 1rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
         
         .about-text p {
             margin-bottom: 1rem;
             line-height: 1.8;
             color: var(--text-light);
+            font-weight: 300;
+            font-size: 0.9rem;
         }
         
         .values {
@@ -59,14 +100,29 @@
             text-align: center;
             padding: 2rem;
             background: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
         }
         
         .value-item i {
-            font-size: 3rem;
-            color: var(--accent-color);
+            font-size: 2.5rem;
+            color: var(--primary-color);
             margin-bottom: 1rem;
+        }
+        
+        .value-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        
+        .value-item p {
+            color: var(--text-light);
+            font-weight: 300;
+            font-size: 0.9rem;
         }
         
         .video-container {
@@ -78,9 +134,8 @@
         .video-embed {
             width: 100%;
             height: 450px;
-            border-radius: 10px;
             border: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
         .gallery {
@@ -93,14 +148,13 @@
             width: 100%;
             height: 300px;
             object-fit: cover;
-            border-radius: 10px;
             transition: var(--transition);
             cursor: pointer;
         }
         
         .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         .team {
@@ -113,32 +167,40 @@
             text-align: center;
             background: var(--white);
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
             transition: var(--transition);
         }
         
         .team-member:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
         .team-member img {
             width: 200px;
             height: 200px;
-            border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
-            border: 5px solid var(--accent-color);
+            border: 3px solid var(--primary-color);
         }
         
         .team-member h3 {
             margin-bottom: 0.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         
         .team-member p {
             color: var(--text-light);
             margin-bottom: 1rem;
+            font-weight: 300;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         
         .team-social {
@@ -150,8 +212,7 @@
         .team-social a {
             width: 40px;
             height: 40px;
-            background: var(--accent-color);
-            border-radius: 50%;
+            background: var(--primary-color);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -160,7 +221,7 @@
         }
         
         .team-social a:hover {
-            background: var(--primary-color);
+            background: var(--text-light);
             transform: translateY(-3px);
         }
         
@@ -172,15 +233,15 @@
         
         .blog-post {
             background: var(--white);
-            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
             transition: var(--transition);
         }
         
         .blog-post:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
         .blog-post img {
@@ -195,17 +256,25 @@
         
         .blog-post-content h3 {
             margin-bottom: 0.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         
         .blog-post-content .date {
-            color: var(--accent-color);
-            font-size: 0.9rem;
+            color: var(--text-light);
+            font-size: 0.8rem;
             margin-bottom: 1rem;
+            letter-spacing: 1px;
         }
         
         .blog-post-content p {
             color: var(--text-light);
             margin-bottom: 1rem;
+            font-weight: 300;
+            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
@@ -215,6 +284,14 @@
             
             .page-hero h1 {
                 font-size: 2rem;
+                letter-spacing: 4px;
+            }
+            
+            .back-btn {
+                top: 80px;
+                left: 10px;
+                padding: 8px 15px;
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -225,16 +302,21 @@
             <a href="index.html" class="logo">MODELS <span>ACADEMY</span></a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="formations.html">Formations</a></li>
-                    <li><a href="mannequins.html">Mannequins</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="about.html" class="active">À PROPOS</a></li>
+                    <li><a href="formations.html">FORMATIONS</a></li>
+                    <li><a href="mannequins.html">MANNEQUINS</a></li>
+                    <li><a href="inscription.html">S'INSCRIRE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
             <i class='bx bx-menu mobile-menu-btn'></i>
         </div>
     </header>
+
+    <a href="javascript:history.back()" class="back-btn">
+        <i class='bx bx-arrow-back'></i> RETOUR
+    </a>
 
     <section class="page-hero">
         <h1>À PROPOS DE NOUS</h1>
@@ -247,7 +329,7 @@
                     <img src="https://images.unsplash.com/photo-1558769132-cb1aea3c3000?w=800" alt="Models Academy">
                 </div>
                 <div class="about-text">
-                    <h3>Notre Histoire</h3>
+                    <h3>NOTRE HISTOIRE</h3>
                     <p>
                         Fondée il y a plus de 15 ans, MODELS ACADEMY MANAGEMENT est devenue une référence dans le monde 
                         du mannequinat et de la formation professionnelle. Notre agence a vu naître et grandir des centaines 
@@ -259,7 +341,7 @@
                         au service de chaque aspirant mannequin. Nous croyons que chaque personne possède un potentiel unique 
                         qu'il suffit de révéler et de cultiver.
                     </p>
-                    <h3 style="margin-top: 2rem;">Nos Objectifs</h3>
+                    <h3 style="margin-top: 2rem;">NOS OBJECTIFS</h3>
                     <p>
                         Notre mission est de former des mannequins professionnels complets, capables de s'adapter à tous 
                         les environnements de la mode. Nous visons l'excellence à travers un enseignement personnalisé, 
@@ -271,22 +353,22 @@
             <div class="values">
                 <div class="value-item">
                     <i class='bx bx-trophy'></i>
-                    <h3>Excellence</h3>
+                    <h3>EXCELLENCE</h3>
                     <p>Nous visons la perfection dans chaque formation et accompagnement</p>
                 </div>
                 <div class="value-item">
                     <i class='bx bx-heart'></i>
-                    <h3>Passion</h3>
+                    <h3>PASSION</h3>
                     <p>Notre amour pour la mode et le mannequinat guide notre travail quotidien</p>
                 </div>
                 <div class="value-item">
                     <i class='bx bx-group'></i>
-                    <h3>Accompagnement</h3>
+                    <h3>ACCOMPAGNEMENT</h3>
                     <p>Un suivi personnalisé pour chaque mannequin, de la formation à la carrière</p>
                 </div>
                 <div class="value-item">
                     <i class='bx bx-star'></i>
-                    <h3>Innovation</h3>
+                    <h3>INNOVATION</h3>
                     <p>Des méthodes d'enseignement modernes adaptées aux tendances actuelles</p>
                 </div>
             </div>
@@ -295,9 +377,9 @@
 
     <section class="section" style="background: var(--secondary-color);">
         <div class="container">
-            <h2 class="section-title">Découvrez Notre Univers</h2>
+            <h2 class="section-title">DÉCOUVREZ NOTRE UNIVERS</h2>
             <div class="video-container">
-                <p style="margin-bottom: 2rem; color: var(--text-light);">
+                <p style="margin-bottom: 2rem; color: var(--text-light); font-weight: 300;">
                     Plongez dans les coulisses de MODELS ACADEMY et découvrez nos formations en action
                 </p>
                 <iframe 
@@ -313,7 +395,7 @@
 
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Notre Galerie</h2>
+            <h2 class="section-title">NOTRE GALERIE</h2>
             <div class="gallery">
                 <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400" alt="Galerie 1">
                 <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400" alt="Galerie 2">
@@ -333,12 +415,12 @@
 
     <section class="section" style="background: var(--secondary-color);">
         <div class="container">
-            <h2 class="section-title">Notre Équipe</h2>
+            <h2 class="section-title">NOTRE ÉQUIPE</h2>
             <div class="team">
                 <div class="team-member">
                     <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400" alt="Sophie Martin">
-                    <h3>Sophie Martin</h3>
-                    <p>Directrice & Coach Podium</p>
+                    <h3>SOPHIE MARTIN</h3>
+                    <p>DIRECTRICE & COACH PODIUM</p>
                     <div class="team-social">
                         <a href="#"><i class='bx bxl-facebook'></i></a>
                         <a href="#"><i class='bx bxl-instagram'></i></a>
@@ -347,8 +429,8 @@
                 </div>
                 <div class="team-member">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Marc Dubois">
-                    <h3>Marc Dubois</h3>
-                    <p>Coach Photo & Directeur Artistique</p>
+                    <h3>MARC DUBOIS</h3>
+                    <p>COACH PHOTO & DIRECTEUR ARTISTIQUE</p>
                     <div class="team-social">
                         <a href="#"><i class='bx bxl-facebook'></i></a>
                         <a href="#"><i class='bx bxl-instagram'></i></a>
@@ -361,33 +443,33 @@
 
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Blog & Actualités</h2>
+            <h2 class="section-title">BLOG & ACTUALITÉS</h2>
             <div class="blog-posts">
                 <div class="blog-post">
                     <img src="https://images.unsplash.com/photo-1558769132-cb1aea3c3000?w=400" alt="Article 1">
                     <div class="blog-post-content">
-                        <div class="date"><i class='bx bx-calendar'></i> 15 Novembre 2024</div>
-                        <h3>Les tendances du mannequinat en 2024</h3>
+                        <div class="date"><i class='bx bx-calendar'></i> 15 NOVEMBRE 2024</div>
+                        <h3>LES TENDANCES DU MANNEQUINAT EN 2024</h3>
                         <p>Découvrez les nouvelles tendances qui façonnent l'industrie du mannequinat cette année...</p>
-                        <a href="#" class="btn">Lire plus</a>
+                        <a href="#" class="btn">LIRE PLUS</a>
                     </div>
                 </div>
                 <div class="blog-post">
                     <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400" alt="Article 2">
                     <div class="blog-post-content">
-                        <div class="date"><i class='bx bx-calendar'></i> 10 Novembre 2024</div>
-                        <h3>Comment réussir son premier défilé</h3>
+                        <div class="date"><i class='bx bx-calendar'></i> 10 NOVEMBRE 2024</div>
+                        <h3>COMMENT RÉUSSIR SON PREMIER DÉFILÉ</h3>
                         <p>Nos conseils d'experts pour aborder sereinement votre première expérience sur le podium...</p>
-                        <a href="#" class="btn">Lire plus</a>
+                        <a href="#" class="btn">LIRE PLUS</a>
                     </div>
                 </div>
                 <div class="blog-post">
                     <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400" alt="Article 3">
                     <div class="blog-post-content">
-                        <div class="date"><i class='bx bx-calendar'></i> 5 Novembre 2024</div>
-                        <h3>La préparation du book photo parfait</h3>
+                        <div class="date"><i class='bx bx-calendar'></i> 5 NOVEMBRE 2024</div>
+                        <h3>LA PRÉPARATION DU BOOK PHOTO PARFAIT</h3>
                         <p>Tous nos secrets pour créer un portfolio qui saura séduire les agences et clients...</p>
-                        <a href="#" class="btn">Lire plus</a>
+                        <a href="#" class="btn">LIRE PLUS</a>
                     </div>
                 </div>
             </div>
@@ -408,7 +490,7 @@
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Liens Rapides</h3>
+                    <h3>LIENS RAPIDES</h3>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="about.html">À propos</a></li>
@@ -418,16 +500,15 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact</h3>
+                    <h3>CONTACT</h3>
                     <ul>
-                        <li><i class='bx bx-phone'></i> +33 1 23 45 67 89</li>
-                        <li><i class='bx bx-envelope'></i> contact@modelsacademy.fr</li>
-                        <li><i class='bx bx-map'></i> Paris, France</li>
+                        <li><i class='bx bx-phone'></i> +229 69 89 69 50</li>
+                        <li><i class='bx bx-map'></i> Calavi Bidossessi, derrière la clôture de l'ORTB</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. Tous droits réservés.</p>
+                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. TOUS DROITS RÉSERVÉS.</p>
             </div>
         </div>
     </footer>

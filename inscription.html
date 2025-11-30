@@ -3,11 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription - MODELS ACADEMY MANAGEMENT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>INSCRIPTION - MODELS ACADEMY MANAGEMENT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="inscription.css">
+    <style>
+        .back-btn {
+            position: fixed;
+            top: 90px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            z-index: 100;
+            text-transform: uppercase;
+        }
+        
+        .back-btn:hover {
+            background: #333333;
+        }
+        
+        .back-btn i {
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .back-btn {
+                top: 80px;
+                left: 10px;
+                padding: 8px 15px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,16 +52,21 @@
             <a href="index.html" class="logo">MODELS <span>ACADEMY</span></a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="formations.html">Formations</a></li>
-                    <li><a href="mannequins.html">Mannequins</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="about.html">À PROPOS</a></li>
+                    <li><a href="formations.html">FORMATIONS</a></li>
+                    <li><a href="mannequins.html">MANNEQUINS</a></li>
+                    <li><a href="inscription.html" class="active">S'INSCRIRE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
             <i class='bx bx-menu mobile-menu-btn'></i>
         </div>
     </header>
+
+    <a href="javascript:history.back()" class="back-btn">
+        <i class='bx bx-arrow-back'></i> RETOUR
+    </a>
 
     <section class="page-hero">
         <h1>FORMULAIRE D'INSCRIPTION</h1>
@@ -35,40 +77,40 @@
             <div class="progress-bar">
                 <div class="progress-step active" data-step="1">
                     <div class="step-number">1</div>
-                    <div class="step-label">Informations</div>
+                    <div class="step-label">INFORMATIONS</div>
                 </div>
                 <div class="progress-step" data-step="2">
                     <div class="step-number">2</div>
-                    <div class="step-label">Expérience</div>
+                    <div class="step-label">EXPÉRIENCE</div>
                 </div>
                 <div class="progress-step" data-step="3">
                     <div class="step-number">3</div>
-                    <div class="step-label">Mensurations</div>
+                    <div class="step-label">MENSURATIONS</div>
                 </div>
                 <div class="progress-step" data-step="4">
                     <div class="step-number">4</div>
-                    <div class="step-label">Photos</div>
+                    <div class="step-label">PHOTOS</div>
                 </div>
             </div>
 
             <form id="inscriptionForm" class="inscription-form">
                 <div class="form-step active" data-step="1">
-                    <h2>Informations Personnelles</h2>
+                    <h2>INFORMATIONS PERSONNELLES</h2>
                     <div class="form-grid">
                         <div class="form-group">
-                            <label>Prénom *</label>
+                            <label>PRÉNOM *</label>
                             <input type="text" name="prenom" required>
                         </div>
                         <div class="form-group">
-                            <label>Nom *</label>
+                            <label>NOM *</label>
                             <input type="text" name="nom" required>
                         </div>
                         <div class="form-group">
-                            <label>Date de naissance *</label>
+                            <label>DATE DE NAISSANCE *</label>
                             <input type="date" name="date_naissance" required>
                         </div>
                         <div class="form-group">
-                            <label>Sexe *</label>
+                            <label>SEXE *</label>
                             <select name="sexe" required>
                                 <option value="">Sélectionner</option>
                                 <option value="femme">Femme</option>
@@ -76,36 +118,36 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Email *</label>
+                            <label>EMAIL *</label>
                             <input type="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label>Téléphone *</label>
+                            <label>TÉLÉPHONE *</label>
                             <input type="tel" name="telephone" required>
                         </div>
                         <div class="form-group full-width">
-                            <label>Adresse *</label>
+                            <label>ADRESSE *</label>
                             <input type="text" name="adresse" required>
                         </div>
                         <div class="form-group">
-                            <label>Ville *</label>
+                            <label>VILLE *</label>
                             <input type="text" name="ville" required>
                         </div>
                         <div class="form-group">
-                            <label>Code postal *</label>
+                            <label>CODE POSTAL *</label>
                             <input type="text" name="code_postal" required>
                         </div>
                     </div>
                     <div class="form-actions">
-                        <button type="button" class="btn" onclick="nextStep()">Suivant <i class='bx bx-right-arrow-alt'></i></button>
+                        <button type="button" class="btn" onclick="nextStep()">SUIVANT <i class='bx bx-right-arrow-alt'></i></button>
                     </div>
                 </div>
 
                 <div class="form-step" data-step="2">
-                    <h2>Expérience & Motivation</h2>
+                    <h2>EXPÉRIENCE & MOTIVATION</h2>
                     <div class="form-grid">
                         <div class="form-group full-width">
-                            <label>Formation souhaitée *</label>
+                            <label>FORMATION SOUHAITÉE *</label>
                             <select name="formation" required>
                                 <option value="">Sélectionner</option>
                                 <option value="podium">Mannequin Podium</option>
@@ -114,7 +156,7 @@
                             </select>
                         </div>
                         <div class="form-group full-width">
-                            <label>Avez-vous une expérience dans le mannequinat ?</label>
+                            <label>AVEZ-VOUS UNE EXPÉRIENCE DANS LE MANNEQUINAT ?</label>
                             <select name="experience" required>
                                 <option value="">Sélectionner</option>
                                 <option value="aucune">Aucune expérience</option>
@@ -124,7 +166,7 @@
                             </select>
                         </div>
                         <div class="form-group full-width">
-                            <label>Avez-vous un book / portfolio ?</label>
+                            <label>AVEZ-VOUS UN BOOK / PORTFOLIO ?</label>
                             <select name="book" required>
                                 <option value="">Sélectionner</option>
                                 <option value="oui">Oui</option>
@@ -133,49 +175,49 @@
                             </select>
                         </div>
                         <div class="form-group full-width">
-                            <label>Pourquoi souhaitez-vous devenir mannequin ? *</label>
+                            <label>POURQUOI SOUHAITEZ-VOUS DEVENIR MANNEQUIN ? *</label>
                             <textarea name="motivation" rows="5" required></textarea>
                         </div>
                         <div class="form-group full-width">
-                            <label>Quels sont vos objectifs professionnels ?</label>
+                            <label>QUELS SONT VOS OBJECTIFS PROFESSIONNELS ?</label>
                             <textarea name="objectifs" rows="4"></textarea>
                         </div>
                     </div>
                     <div class="form-actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class='bx bx-left-arrow-alt'></i> Précédent</button>
-                        <button type="button" class="btn" onclick="nextStep()">Suivant <i class='bx bx-right-arrow-alt'></i></button>
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class='bx bx-left-arrow-alt'></i> PRÉCÉDENT</button>
+                        <button type="button" class="btn" onclick="nextStep()">SUIVANT <i class='bx bx-right-arrow-alt'></i></button>
                     </div>
                 </div>
 
                 <div class="form-step" data-step="3">
-                    <h2>Mensurations</h2>
+                    <h2>MENSURATIONS</h2>
                     <div class="form-grid">
                         <div class="form-group">
-                            <label>Taille (cm) *</label>
+                            <label>TAILLE (CM) *</label>
                             <input type="number" name="taille" required>
                         </div>
                         <div class="form-group">
-                            <label>Poids (kg) *</label>
+                            <label>POIDS (KG) *</label>
                             <input type="number" name="poids" required>
                         </div>
                         <div class="form-group">
-                            <label>Tour de poitrine (cm)</label>
+                            <label>TOUR DE POITRINE (CM)</label>
                             <input type="number" name="tour_poitrine">
                         </div>
                         <div class="form-group">
-                            <label>Tour de taille (cm)</label>
+                            <label>TOUR DE TAILLE (CM)</label>
                             <input type="number" name="tour_taille">
                         </div>
                         <div class="form-group">
-                            <label>Tour de hanches (cm)</label>
+                            <label>TOUR DE HANCHES (CM)</label>
                             <input type="number" name="tour_hanches">
                         </div>
                         <div class="form-group">
-                            <label>Pointure (chaussures)</label>
+                            <label>POINTURE (CHAUSSURES)</label>
                             <input type="text" name="pointure">
                         </div>
                         <div class="form-group">
-                            <label>Couleur des yeux</label>
+                            <label>COULEUR DES YEUX</label>
                             <select name="couleur_yeux">
                                 <option value="">Sélectionner</option>
                                 <option value="marron">Marron</option>
@@ -186,7 +228,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Couleur des cheveux</label>
+                            <label>COULEUR DES CHEVEUX</label>
                             <select name="couleur_cheveux">
                                 <option value="">Sélectionner</option>
                                 <option value="noir">Noir</option>
@@ -198,43 +240,43 @@
                             </select>
                         </div>
                         <div class="form-group full-width">
-                            <label>Particularités physiques (tatouages, piercings, etc.)</label>
+                            <label>PARTICULARITÉS PHYSIQUES (TATOUAGES, PIERCINGS, ETC.)</label>
                             <textarea name="particularites" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="form-actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class='bx bx-left-arrow-alt'></i> Précédent</button>
-                        <button type="button" class="btn" onclick="nextStep()">Suivant <i class='bx bx-right-arrow-alt'></i></button>
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class='bx bx-left-arrow-alt'></i> PRÉCÉDENT</button>
+                        <button type="button" class="btn" onclick="nextStep()">SUIVANT <i class='bx bx-right-arrow-alt'></i></button>
                     </div>
                 </div>
 
                 <div class="form-step" data-step="4">
-                    <h2>Upload de Photos</h2>
-                    <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">
+                    <h2>UPLOAD DE PHOTOS</h2>
+                    <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light); font-weight: 300;">
                         Veuillez télécharger vos photos (polaroids recommandés : face, profil, plein pied)
                     </p>
                     <div class="upload-section">
                         <div class="upload-box">
                             <i class='bx bx-image-add'></i>
-                            <h3>Photo de face</h3>
+                            <h3>PHOTO DE FACE</h3>
                             <input type="file" name="photo_face" accept="image/*" onchange="previewImage(this, 'preview-face')">
                             <div id="preview-face" class="image-preview"></div>
                         </div>
                         <div class="upload-box">
                             <i class='bx bx-image-add'></i>
-                            <h3>Photo de profil</h3>
+                            <h3>PHOTO DE PROFIL</h3>
                             <input type="file" name="photo_profil" accept="image/*" onchange="previewImage(this, 'preview-profil')">
                             <div id="preview-profil" class="image-preview"></div>
                         </div>
                         <div class="upload-box">
                             <i class='bx bx-image-add'></i>
-                            <h3>Photo plein pied</h3>
+                            <h3>PHOTO PLEIN PIED</h3>
                             <input type="file" name="photo_plein_pied" accept="image/*" onchange="previewImage(this, 'preview-plein')">
                             <div id="preview-plein" class="image-preview"></div>
                         </div>
                         <div class="upload-box">
                             <i class='bx bx-image-add'></i>
-                            <h3>Photo supplémentaire</h3>
+                            <h3>PHOTO SUPPLÉMENTAIRE</h3>
                             <input type="file" name="photo_extra" accept="image/*" onchange="previewImage(this, 'preview-extra')">
                             <div id="preview-extra" class="image-preview"></div>
                         </div>
@@ -242,12 +284,12 @@
                     <div class="form-group full-width" style="margin-top: 2rem;">
                         <label>
                             <input type="checkbox" name="conditions" required>
-                            J'accepte les conditions générales et la politique de confidentialité *
+                            J'ACCEPTE LES CONDITIONS GÉNÉRALES ET LA POLITIQUE DE CONFIDENTIALITÉ *
                         </label>
                     </div>
                     <div class="form-actions">
-                        <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class='bx bx-left-arrow-alt'></i> Précédent</button>
-                        <button type="submit" class="btn"><i class='bx bx-check'></i> Envoyer ma candidature</button>
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()"><i class='bx bx-left-arrow-alt'></i> PRÉCÉDENT</button>
+                        <button type="submit" class="btn"><i class='bx bx-check'></i> ENVOYER MA CANDIDATURE</button>
                     </div>
                 </div>
             </form>
@@ -268,7 +310,7 @@
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Liens Rapides</h3>
+                    <h3>LIENS RAPIDES</h3>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="about.html">À propos</a></li>
@@ -278,16 +320,15 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact</h3>
+                    <h3>CONTACT</h3>
                     <ul>
-                        <li><i class='bx bx-phone'></i> +33 1 23 45 67 89</li>
-                        <li><i class='bx bx-envelope'></i> contact@modelsacademy.fr</li>
-                        <li><i class='bx bx-map'></i> Paris, France</li>
+                        <li><i class='bx bx-phone'></i> +229 69 89 69 50</li>
+                        <li><i class='bx bx-map'></i> Calavi Bidossessi, derrière la clôture de l'ORTB</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. Tous droits réservés.</p>
+                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. TOUS DROITS RÉSERVÉS.</p>
             </div>
         </div>
     </footer>
